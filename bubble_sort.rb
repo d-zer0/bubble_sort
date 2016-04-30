@@ -5,7 +5,6 @@
 def bubble_sort (array)
 	a = 0
 	b = 1
-	loop = 0
 	until (array.each_cons(2).all? { |a, b| (a <=> b) <= 0}) == true do
 		sort = lambda {array[a] <=> array[b]}
 		sort_call = sort.call
@@ -34,6 +33,5 @@ def bubble_sort (array)
 	puts array.inspect
 end
 
-array = [4, 2, 5, 6, 3]
-
+array = [4, 2, 5, 6, 3, 23, 5546, 234, 234, 6]
 bubble_sort(array)
